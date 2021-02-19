@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>whosblog</title>
+  
+  
+  <link href="https://whosya.cn/atom.xml" rel="self"/>
+  
+  <link href="https://whosya.cn/"/>
+  <updated>2021-02-19T04:34:12.579Z</updated>
+  <id>https://whosya.cn/</id>
+  
+  <author>
+    <name>whosya</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://whosya.cn/2021/02/18/hello-world/"/>
+    <id>https://whosya.cn/2021/02/18/hello-world/</id>
+    <published>2021-02-18T09:48:33.808Z</published>
+    <updated>2021-02-19T04:34:12.579Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div align=&quot;middle&quot;&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 
+height=86</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>

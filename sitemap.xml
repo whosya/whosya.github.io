@@ -2,23 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://whosya.cn/404.html</loc>
+    <loc>https://whosya.cn/2021/02/18/hello-world/</loc>
     
-    <lastmod>2021-02-18</lastmod>
+    <lastmod>2021-02-19</lastmod>
     
   </url>
   
   <url>
-    <loc>https://whosya.cn/2021/02/18/hello-world/</loc>
+    <loc>https://whosya.cn/contact/index.html</loc>
     
-    <lastmod>2021-02-18</lastmod>
+    <lastmod>2021-02-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://whosya.cn/categories/index.html</loc>
+    
+    <lastmod>2021-02-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://whosya.cn/about/index.html</loc>
+    
+    <lastmod>2021-02-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://whosya.cn/friends/index.html</loc>
+    
+    <lastmod>2021-02-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://whosya.cn/tags/index.html</loc>
+    
+    <lastmod>2021-02-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://whosya.cn/404.html</loc>
+    
+    <lastmod>2021-02-19</lastmod>
     
   </url>
   
 
   <url>
     <loc>https://whosya.cn/</loc>
-    <lastmod>2021-02-18</lastmod>
+    <lastmod>2021-02-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
