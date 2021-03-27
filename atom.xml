@@ -6,7 +6,7 @@
   <link href="https://whosya.cn/atom.xml" rel="self"/>
   
   <link href="https://whosya.cn/"/>
-  <updated>2021-02-19T04:34:12.579Z</updated>
+  <updated>2021-02-16T13:11:29.253Z</updated>
   <id>https://whosya.cn/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SequenceServer搭建自己的blast服务器</title>
+    <link href="https://whosya.cn/2021/03/27/sequenceserver-da-jian-zi-ji-de-blast-fu-wu-qi-jian-dan/"/>
+    <id>https://whosya.cn/2021/03/27/sequenceserver-da-jian-zi-ji-de-blast-fu-wu-qi-jian-dan/</id>
+    <published>2021-03-27T06:51:04.959Z</published>
+    <updated>2021-02-16T13:11:29.253Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;安装-linux&quot;&gt;&lt;a href=&quot;#安装-linux&quot; class=&quot;headerlink&quot; title=&quot;安装(linux)&quot;&gt;&lt;/a&gt;安装(linux)&lt;/h2&gt;&lt;h3 id=&quot;依赖：&quot;&gt;&lt;a href=&quot;#依赖：&quot; class=&quot;headerlink&quot; title=&quot;依赖：&quot;&gt;&lt;/a&gt;依赖：&lt;/h3&gt;&lt;h4 id=&quot;1-blast&quot;&gt;&lt;a href=&quot;#1-blast&quot; class=&quot;headerlink&quot; title=&quot;1.blast&quot;&gt;&lt;/a&gt;1.blast&lt;/h4&gt;&lt;p&gt;三种方法：conda安装，自动安装，自定义路径&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-Bash&quot; data-language=&quot;Bash&quot;&gt;&lt;code class=&quot;language-Bash&quot;&gt;conda install blast  
+sequenceserver  #sequenceserver安装之后运行自动检测 如果不存在，它将自动下载NCBI BLAST +
+sequenceserver -s -b &amp;#x2F;path&amp;#x2F;to&amp;#x2F;latest&amp;#x2F;blast&amp;#x2F;binaries  #自定义路径&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

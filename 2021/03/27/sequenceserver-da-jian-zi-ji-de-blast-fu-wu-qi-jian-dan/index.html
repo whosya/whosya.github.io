@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="contact, whosblog">
+    <meta name="keywords" content="SequenceServer搭建自己的blast服务器, whosblog">
     <meta name="description" content="没有什么欲望，只想把自己喜欢的事做好">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>contact | whosblog</title>
+    <title>SequenceServer搭建自己的blast服务器 | whosblog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -414,69 +414,474 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                老虎小帅的博客
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['没有什么欲望，只想把自己喜欢的事做好','Have no desire, just want to do what you love to do well'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">SequenceServer搭建自己的blast服务器</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
 
 
-    </div>
-</div>
+<main class="post-container content">
 
-<main class="content">
-    <div id="contact" class="container chip-container">
-        <div class="card">
-            <div class="card-content">
-                <div class="tag-title center-align">
-                    <i class="fas fa-comments"></i>&nbsp;&nbsp;留言板
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-03-27
                 </div>
                 
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-02-16
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    977
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    4 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
-        <div class="card">
-            
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="安装-linux"><a href="#安装-linux" class="headerlink" title="安装(linux)"></a>安装(linux)</h2><h3 id="依赖："><a href="#依赖：" class="headerlink" title="依赖："></a>依赖：</h3><h4 id="1-blast"><a href="#1-blast" class="headerlink" title="1.blast"></a>1.blast</h4><p>三种方法：conda安装，自动安装，自定义路径</p>
+<pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">conda install blast  
+sequenceserver  #sequenceserver安装之后运行自动检测 如果不存在，它将自动下载NCBI BLAST +
+sequenceserver -s -b &#x2F;path&#x2F;to&#x2F;latest&#x2F;blast&#x2F;binaries  #自定义路径<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<a id="more"></a>
+
+<h4 id="2-ruby-dev-build-essential和ruby包"><a href="#2-ruby-dev-build-essential和ruby包" class="headerlink" title="2.ruby-dev, build-essential和ruby包"></a>2.ruby-dev, build-essential和ruby包</h4><pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">sudo apt install ruby-dev build-essential ruby<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="安装和运行"><a href="#安装和运行" class="headerlink" title="安装和运行"></a>安装和运行</h3><pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">sudo gem install sequenceserver
+sequenceserver<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>sequenceserver命令配置和运行SequenceServer。如果不存在，它将自动下载NCBI BLAST +，询问包含数据库序列的目录的位置，格式化FASTA文件供BLAST +使用，并在搜索表单中列出它们以供使用。</p>
+<pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">Could not find BLAST+ databases in: &#x2F;home&#x2F;user&#x2F;database&#x2F;sequenceserver.
+
+Search for FASTA files (.fa, .fasta, .fna) in &#39;&#x2F;home&#x2F;user&#x2F;database&#x2F;sequenceserver&#39; and try
+creating BLAST+ databases? [y&#x2F;n] (Default: y).
+
+&gt;&gt; y
+#&#x2F;home&#x2F;user&#x2F;database&#x2F;sequenceserver是自己创建指定的路径
+Searching ...
+
+FASTA file: &#x2F;home&#x2F;whosy&#x2F;database&#x2F;sequenceserver&#x2F;test.faa
+FASTA type: protein
+Proceed? [y&#x2F;n] (Default: y):  y                                     #回车
+Enter a database title or will use &#39;test&#39;:                          #回车
+Enter taxid (optional):                                             #回车
+Building a new DB, current time: 02&#x2F;16&#x2F;2021 20:06:27
+New DB name:   &#x2F;home&#x2F;whosy&#x2F;database&#x2F;sequenceserver&#x2F;test.faa
+New DB title:  test
+Sequence type: Protein
+Keep MBits: T
+Maximum file size: 1000000000B
+Ignoring sequence &#39;lcl|Bvulgaris21006&#39; as it has no sequence data
+······
+······
+dding sequences from FASTA; added 794467 sequences in 23.4606 seconds.
+[2021-02-16 20:06:51] WARN  Will listen on all interfaces (0.0.0.0). Consider using 127.0.0.1 (--host option).
+** SequenceServer is ready.
+   Go to http:&#x2F;&#x2F;localhost:4567 in your browser and start BLASTing!
+   Press CTRL+C to quit.
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>接下来就可以浏览器输入https://<em>yourhostid</em> :4567</p>
+<p>记得开放4567端口</p>
+<pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">sudo ufw allow 4567<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>注：如果要加入新的数据库直接把文件移入数据库文件夹，再次运行即可。</p>
+<pre><code>  之后再次用nohup命令放到后台运行，即可关掉命令行界面
+</code></pre>
+<h3 id="进阶用法"><a href="#进阶用法" class="headerlink" title="进阶用法"></a>进阶用法</h3><h6 id="1-常用选项"><a href="#1-常用选项" class="headerlink" title="1.常用选项"></a>1.常用选项</h6><p>下表列出了SequenceServer通过配置文件或命令行选项接受的所有配置值。命令行选项优先于配置文件中的值。</p>
+<table><thead><tr><th>配置文件</th><th>命令行</th><th>描述</th></tr></thead><tbody><tr><td>：bin：</td><td>-b / --bin</td><td>指示BLAST +二进制文件的路径。</td></tr><tr><td>：database_dir：</td><td>-d / --database_dir</td><td>指示BLAST +数据库的路径。</td></tr><tr><td>：num_threads：</td><td>-n / --num_threads</td><td>用于BLAST搜索的线程数。</td></tr><tr><td>：主持人：</td><td>-H /-主机</td><td>主机以在其上运行SequenceServer。</td></tr><tr><td>：港口：</td><td>-p /-端口</td><td>在其上运行SequenceServer的端口。</td></tr><tr><td>：要求：</td><td>-r /-要求</td><td>从该文件加载扩展名。</td></tr></tbody></table>
+
+<p>下表列出了可用的其他命令行选项。</p>
+<table><thead><tr><th>命令行</th><th>描述</th></tr></thead><tbody><tr><td>-c / --config_file</td><td>提供您的自定义配置文件的路径位置</td></tr><tr><td>-s /-设置</td><td>在默认或给定的配置文件中设置配置值</td></tr><tr><td>-m / --make-blast-databases</td><td>创建BLAST数据库</td></tr><tr><td>-l / --list-databases</td><td>列出找到的BLAST数据库</td></tr><tr><td>-u / --list-unformatted-fastas</td><td>列出未格式化的FASTA文件</td></tr><tr><td>-i / --interactive</td><td>以交互模式运行SequenceServer</td></tr><tr><td>-D /-展开</td><td>在开发（调试）模式下运行SequenceServer</td></tr><tr><td>-v / --version</td><td>打印将要加载的SequenceServer的版本号</td></tr><tr><td>-h /-帮助</td><td>显示此帮助消息</td></tr></tbody></table>
+
+<p>简单应用：</p>
+<pre class="line-numbers language-none"><code class="language-none">#指定自己的数据路径，并创建blast数据库
+sequenceserver -m -d &#x2F;path&#x2F;to&#x2F;directory_with_fasta_files
+#设置新的数据库默认路径
+sequenceserver -c 〜&#x2F;.sequenceserver.conf -s -d &#x2F;path&#x2F;to&#x2F;new&#x2F;location&#x2F;of&#x2F;database&#x2F; sequences
+#设置使用自己安装的blast+
+sequenceserver -s -b &#x2F;path&#x2F;to&#x2F;latest&#x2F;blast&#x2F;binaries<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h6 id="2使用ncbi数据库"><a href="#2使用ncbi数据库" class="headerlink" title="2使用ncbi数据库"></a>2使用ncbi数据库</h6><p>NCBI提供可公开获取的序列作为预格式化的BLAST数据库，并且可以<code>update_blastdb.pl</code> 使用BLAST分发的脚本进行下载。由于这些数据库很大，因此它们被拆分成多个文件（卷）并与别名文件链接在一起。SequenceServer可与此类多部分数据库无缝协作。除了<code>update_blastdb.pl</code>从NCBI更快下载BLAST数据库外，我们还有一种选择 ：<a target="_blank" rel="noopener" href="https://github.com/yeban/ncbi-blast-dbs">ncbi-blast-dbs</a>。</p>
+<pre class="line-numbers language-none"><code class="language-none">＃安装ncbi-blast-dbs
+sudo gem install ncbi-blast-dbs
+＃查看可用的BLAST数据库。
+ncbi-blast-dbs
+＃下载一个或多个数据库。
+ncbi-blast-dbs nt nr<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h6 id="3-taxid的设置，与JBrowse集成，与Apache集成等，有待探索。"><a href="#3-taxid的设置，与JBrowse集成，与Apache集成等，有待探索。" class="headerlink" title="3.-taxid的设置，与JBrowse集成，与Apache集成等，有待探索。"></a>3.<code>-taxid</code>的设置，与JBrowse集成，与Apache集成等，有待探索。</h6>
+                
+            </div>
+            <hr/>
 
             
 
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">whosya</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://whosya.cn/2021/03/27/sequenceserver-da-jian-zi-ji-de-blast-fu-wu-qi-jian-dan/">https://whosya.cn/2021/03/27/sequenceserver-da-jian-zi-ji-de-blast-fu-wu-qi-jian-dan/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">whosya</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
             
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
 
             
+        </div>
+    </div>
 
-            
-            <style>
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
     .valine-card {
         margin: 1.5rem auto;
     }
@@ -738,15 +1143,254 @@
     });
 </script>
 
-            
-			
-			
+    
 
-            
+    
 
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/03/27/sequenceserver-da-jian-zi-ji-de-blast-fu-wu-qi-jian-dan/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="SequenceServer搭建自己的blast服务器">
+                        
+                        <span class="card-title">SequenceServer搭建自己的blast服务器</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            安装(linux)依赖：1.blast三种方法：conda安装，自动安装，自定义路径
+conda install blast  
+sequenceserver  #sequenceserver安装之后运行自动检测 如果不存在，它将自动下载N
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            whosya
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/02/18/hello-world/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        
+                        <span class="card-title">Hello World</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            whosya
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: whosblog<br />'
+            + '文章作者: whosya<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
         </div>
     </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
 </main>
+
+
 
 
     <footer class="page-footer bg-color">
